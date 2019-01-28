@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+CMS API
 
-Things you may want to cover:
+* Ruby version - 2.5.1
+* Rails version - 5.2
 
-* Ruby version
+Steps to setup the application
 
-* System dependencies
+1. Set gemset name inside .ruby-gemset file in application root, then run `bundle install` inside application root directory
+2. Copy database.yml.example content to database.yml and add username and password of Postgres instance
+3. Run rails db:create
+4. Run rails db:migrate
+5. Run rails db:seed to populate seed data
+6. Start rails server by executing `rails s` command inside project root directory
 
-* Configuration
+How to run the test suite?
 
-* Database creation
+Run `rspec spec` inside application root
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

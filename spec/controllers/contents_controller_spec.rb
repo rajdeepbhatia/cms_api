@@ -7,12 +7,12 @@ RSpec.describe ContentsController, type: :controller do
       FactoryBot.create(:content, status: :draft)
     end
 
-    it 'returns http success' do
+    it 'should return http success' do
       get :index
       expect(response).to have_http_status(:success)
     end
 
-    it 'responds with JSON body containing expected Contents' do
+    it 'should respond with JSON body containing expected Contents' do
       get :index
       response_body = JSON.parse(response.body).with_indifferent_access
       expect(response_body[:data].length).to eq 1

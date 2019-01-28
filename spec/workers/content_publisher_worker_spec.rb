@@ -2,7 +2,7 @@ require 'rails_helper'
 RSpec.describe ContentPublisherWorker, type: :worker do
   it { is_expected.to be_processed_in :default }
 
-  it 'should trigger the after create callback when status is draft' do
+  it 'should enqueue a sidekiq job to update status when initial status is draft' do
     content = FactoryBot.create(:content, status: :draft)
     expect(ContentPublisherWorker).to have_enqueued_sidekiq_job(content.id).in(1.day)
   end
