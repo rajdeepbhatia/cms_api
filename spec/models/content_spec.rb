@@ -28,4 +28,13 @@ RSpec.describe Content, type: :model do
       end
     end
   end
+
+  context 'constants' do
+    describe 'DEFAULT_LIMIT' do
+      it do
+        expect { Content::DEFAULT_LIMIT }.to_not raise_error
+        expect(Content::DEFAULT_LIMIT).to eq 10
+      end
+    end
+  end
 end
