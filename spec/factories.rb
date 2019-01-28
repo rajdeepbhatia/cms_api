@@ -5,7 +5,7 @@ FactoryBot.define do
     author { 'Rajdeep' }
     summary { 'This is an awesome article!' }
     content { 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' }
-    status { 1 }
+    status { :published }
   end
 
 end
